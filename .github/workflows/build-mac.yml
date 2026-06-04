@@ -22,13 +22,12 @@ jobs:
     
     - name: Build with PyInstaller
       run: |
-        # 改成你的文件名（注意大小写）
-        pyinstaller --onefile --windowed --add-data "photos:photos" --name "毛不易桌宠" PetFinal.py
+        pyinstaller --onefile --windowed --add-data "photos:photos" --name "毛毛桌宠" "我の毛毛桌宠.py"
     
     - name: Compress app
       run: |
         cd dist
-        zip -r 毛不易桌宠_Mac.zip 毛不易桌宠.app
+        zip -r 毛毛桌宠_Mac.zip 毛毛桌宠.app
     
     - name: Upload artifact
       uses: actions/upload-artifact@v4
